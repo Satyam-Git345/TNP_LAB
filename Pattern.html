@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let row=15;
+       let i,j;
+        let String=""; 
+        for(i = 0; i<row; i++) 
+        {
+           for (j =row-i; j>1; j--) 
+           {
+                 String+=" ";         
+           }
+           
+           for(j=0; j<=i; j++)
+           {
+                 String+="*";     
+           }
+
+           String+="\n";  
+        }
+          console.log(String);
+          document.write(`${String}`);
+    </script>
+</body>
+</html>

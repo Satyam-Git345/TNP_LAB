@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function factorial(n) {
+        let fact = 1;
+        for (let i = 1; i <= n; i++) {
+          fact = fact * i;
+        }
+         return fact;
+      }
+
+      let f = function (n) {
+        let fact = 1;
+        for (let i = 1; i <= n; i++) {
+          fact = fact * i;
+        }
+         return fact;
+      };
+
+
+       let f1 = (n) => {
+        let fact = 1;
+        for (let i = 1; i <= n; i++) {
+          fact = fact * i;
+        }
+        return fact;
+      };
+
+      document.writeln(`Regular Function:${factorial(5)}<br>`);
+      document.writeln(`Function Expression:${f(5)}<br>`);
+      document.writeln(`Arrow Function Function:${f1(5)}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+        function total(array) {
+           let t=0;
+        for(let i=0; i<array.length; i++){
+           t+=array[i];
+        } 
+        return t;
+   }
+
+    function percentage(total){
+         let per=total/5.0;
+         return per;
+    }
+
+
+function Greet(p){
+  if(p>=65 && p<=75)
+          document.write(`<h2>Good</h2>`);
+  else if(p>=75 && p<=85)
+          document.write(`<h2>Very Good</h2>`);
+  else if(p>=85 && p<=100)
+          document.write(`<h2>Excelent!!</h2>`);
+}
+
+
+function Grade(p){
+    if(p<33)
+         document.write(`<h2>Fail Do HardWork!!</h2>`);
+    else if(p>=33 && p<=45)
+         document.write(`<h2>3rd Division</h2>`);
+    else if(p>=45 && p<=60)
+         document.write(`<h2>2nd Division</h2>`);
+    else if(p>=60 && p<=100)
+         document.write(`<h2>1st Division</h2>`);
+}
+
+
+function printmarksheet(array) {
+let t=total(array);
+document.write(`<h2>Your Total Marks: ${t}</h2>`);
+let p=percentage(t);
+document.write(`<h2>Your Percentage: ${p}</h2>`);
+Grade(p);
+Greet(p);
+console.log(g);
+console.log(gree);
+}
+
+ let math=parseInt(prompt("Enter Marks Obtain in Maths:"));
+ let phy=parseInt(prompt("Enter Marks Obtain in Physics:"));
+ let chem=parseInt(prompt("Enter Marks Obtain in Chemistry:"));
+ let eng=parseInt(prompt("Enter Marks Obtain in English:"));
+ let hin=parseInt(prompt("Enter Marks Obtain in Hindi:"));
+
+
+ document.write(`<center><h1>-:-Report Card-:-</h1></center>`);
+ document.write(`<h2>Your All Subject Marks Given Blow:</h2>`); 
+ document.write(`<h2>Maths: ${math}</h2>`);
+ document.write(`<h2>Physics: ${phy}</h2>`);
+ document.write(`<h2>Chemistry: ${chem}</h2>`);
+ document.write(`<h2>English: ${eng}</h2>`);
+ document.write(`<h2>Hindi: ${hin}</h2>`);
+        
+ let arr=[math,phy,chem,eng,hin];
+</script>
+<!-- <input type="button" value="More information" onclick="printmarksheet(arr)"><br>
+To View More Information About Result<a href="javascript:printmarksheet(arr)">Click</a>Here -->
+printmarksheet(arr);
+</body>
+</html>
